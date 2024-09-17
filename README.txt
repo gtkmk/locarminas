@@ -1,8 +1,8 @@
-Dorang Free Bootstrap4 Landing Page for personal and commercial use. Designed with ♥️ and creativity by Devcrud.com 
-
-Product Page: https://wwww.devcrud.com/
+Site destinado à empresa Locarminas. Feito por Davi Auguto (github.com/gtkmk)
 
 Credits:
+	Base:
+		DevCrud:			(https://wwww.devcrud.com/)
 
     Demo Images:
         Unsplash:       	(https://www.unsplash.com)
