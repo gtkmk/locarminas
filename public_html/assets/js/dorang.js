@@ -61,12 +61,18 @@ $(document).ready(function() {
         document.querySelector('.mobile-menu').classList.toggle('active');
     });
 
+    document.querySelectorAll('.nav-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.remove('active');
+        });
+    });
+
     $(document).on('click', '[data-target="open-whatsapp"]', function(e) {
         e.preventDefault();
 
         setTimeout(function() {
             var message = encodeURIComponent("Olá, gostaria de saber mais sobre os serviços oferecidos pela Locarminas.");
-            window.open('https://wa.me/5531986896648?text=' + message, '_blank');
+            window.open('https://wa.me/553195712361?text=' + message, '_blank');
         }, 800);
     });
 

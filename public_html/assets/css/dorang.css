@@ -12021,6 +12021,7 @@ body.dark-theme {
 }
 
 .mobile-menu {
+    transition: height 0.5s ease, opacity 0.5s ease;
     display: flex;
 }
 
@@ -12069,4 +12070,8 @@ body.dark-theme {
 
 .fs-1 {
   font-size: 1rem !important;
+}
+
+.whatsapp-btn {
+  width: 150px;
 }
