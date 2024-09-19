@@ -26,7 +26,7 @@
         <ul class="nav-navbar container">
             <li class="nav-item"><a id="menu-sobre" href="#about-us" class="nav-link">Sobre</a></li>
             <li class="nav-item"><a id="menu-servicos" href="#services" class="nav-link">Serviços</a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><img src="assets/imgs/logo-1-branca.png" alt="Locarminas, logo da empresa" style="height: auto; width: 250px;"></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><img src="assets/imgs/logo.png" alt="Locarminas, logo da empresa" style="height: auto; width: 250px;"></a></li>
             <li class="nav-item"><a id="menu-frota" href="#fleet" class="nav-link">Frota</a></li>
             <li class="nav-item"><a id="menu-contato" href="#contact" class="nav-link">Contato</a></li>
         </ul>
@@ -34,7 +34,7 @@
 
     <nav class="page-navbar mobile-menu" data-spy="affix" data-offset-top="10">
         <div class="logo">
-            <img src="assets/imgs/logo-1-branca.png" alt="Locarminas, logo da empresa" style="height: auto; width: 250px;">
+            <img src="assets/imgs/logo.png" alt="Locarminas, logo da empresa" style="height: auto; width: 250px;">
         </div>
         <nav class="nav-links">
             <ul class="nav-navbar container">
@@ -64,7 +64,7 @@
         <div class="overlay"></div>
         <div class="header-content">
             <h1 class="header-title">Locarminas, seu transporte de confiança</h1>
-            <p class="header-subtitle">Especialistas em receptivo e translado para executivos, turistas e eventos, com serviços personalizados
+            <p class="header-subtitle">Especialistas em receptivo, translado, city tour e transporte para eventos, com serviços personalizados
                 que garantem pontualidade, conforto e segurança em cada trajeto.
             </p>
 
@@ -146,27 +146,43 @@
                 <h2 class="city-tour-title">City Tour</h2>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="city-tour-images">
-                            <img src="assets/imgs/cidade_ouro_preto.png" alt="Imagem do centro histórico de Ouro Preto">
-                            <img src="assets/imgs/cidade_tiradentes.png" alt="Imagem do centro histórico de Tiradentes">
-                            <img src="assets/imgs/cidade_diamantina.png" alt="Imagem do centro histórico de Diamantina">
+                        <div id="cityTourCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/imgs/tiradentes.jpg" alt="Imagem do centro histórico de Tiradentes" class="d-block w-100 city-tour-img">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/imgs/ouropreto.jpg" alt="Imagem do centro histórico de Tiradentes" class="d-block w-100 city-tour-img">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/imgs/diamantina.jpg" alt="Imagem do centro histórico de Diamantina" class="d-block w-100 city-tour-img">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/imgs/santuario_caraca.jpg" alt="Imagem do Santuário do Caraça" class="d-block w-100 city-tour-img">
+                            </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#cityTourCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#cityTourCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
                         </div>
                     </div>
                     <div class="col-md-6 city-tour-description">
-                        <p class="city-tour-text">
-                            Conheça as maravilhas dos centros históricos de Minas Gerais em nosso exclusivo City Tour. 
-                            Escolha as cidades que desejar e monte seu pacote ou peça para que nossos guias e motoristas se 
-                            encarreguem de todo o processo. Desfrute de uma viagem por diversas cidades que preservam a história
-                            e a cultura de nosso estado, com paradas estratégicas nos pontos turísticos mais emblemáticos. 
-                            Transporte confortável, seguro e com guias experientes, proporcionando uma experiência inesquecível.
-                        </p>
-                        <p class="city-tour-text">
-                            Perfeito para quem deseja explorar o melhor da arquitetura colonial e a rica história de Minas Gerais.
-                        </p>
+                    <p class="city-tour-text">
+                        Conheça as maravilhas dos centros históricos de Minas Gerais em nosso exclusivo City Tour.
+                        Escolha as cidades que desejar e monte seu pacote ou peça para que nossos guias e motoristas se 
+                        encarreguem de todo o processo. Desfrute de uma viagem por diversas cidades que preservam a história
+                        e a cultura de nosso estado, com paradas estratégicas nos pontos turísticos mais emblemáticos.
+                    </p>
+                    <p class="city-tour-text">
+                        Perfeito para quem deseja explorar o melhor da arquitetura colonial e a rica história de Minas Gerais.
+                    </p>
                     </div>
-                </div>
+              </div>
             </div>
-        </section>
+          </section>
 
         <section class="mt-5" id="fleet">
             <div class="col-md-10 col-lg-8 m-auto">
@@ -246,8 +262,6 @@
         </div>
     </div>
 </div>
-    
-    <!-- end of pre footer -->
 
     <!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>

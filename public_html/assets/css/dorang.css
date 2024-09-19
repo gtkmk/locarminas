@@ -6940,9 +6940,6 @@ a.close.disabled {
   width: 15%;
   color: #fff;
   text-align: center;
-  opacity: 0.5;
-  -webkit-transition: opacity 0.15s ease;
-  transition: opacity 0.15s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -6964,10 +6961,14 @@ a.close.disabled {
 
 .carousel-control-prev {
   left: 0;
+  background-color: transparent;
+  border: transparent;
 }
 
 .carousel-control-next {
   right: 0;
+  background-color: transparent;
+  border: transparent;
 }
 
 .carousel-control-prev-icon,
@@ -6979,11 +6980,12 @@ a.close.disabled {
 }
 
 .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+  opacity: 1 !important;
 }
 
 .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e");
 }
 
 .carousel-indicators {
@@ -11904,10 +11906,10 @@ body.dark-theme {
     display: flex;
 }
 
-/* City Tour */
+/* Carrossel de City Tour */
 .city-tour-section {
   position: relative;
-  padding: 60px 0;
+  padding: 30px 0;
   background: url('../imgs/lagoa-pampulha.jpg') no-repeat center center/cover;
   border-radius: 0.25rem;
   color: white;
@@ -11928,23 +11930,43 @@ body.dark-theme {
   z-index: 1;
 }
 
-.city-tour-images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.city-tour-images img {
+.city-tour-img {
   width: 100%;
-  max-width: 300px;
-  transform: rotate(-5deg);
+  height: 400px;
+  object-fit: inherit;
   border: 5px solid #fff;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.city-tour-description {
-  margin-top: 30px;
+.city-tour-description{
+  padding: 40px 0;
+}
+
+@media (min-width: 768px) {
+  .city-tour-description{
+    padding: 0;
+  }
+
+  .city-tour-img {
+    height: 480px;
+  }
+}
+
+@media (min-width: 992px) {
+  .city-tour-img {
+    height: 410px;
+  }
+
+  .city-tour-description{
+    padding: 40px 0;
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
 }
 
 .city-tour-title {
@@ -11958,12 +11980,12 @@ body.dark-theme {
   line-height: 1.8;
   font-size: 1rem;
   background-color: rgba(0, 0, 0, 0.2);
-  padding: 2px;
+  padding: 10px;
   border-radius: 10px;
   color: #fff !important;
 }
 
-/* Mobile responsiveness in city tour session */
+/* Responsividade */
 @media (max-width: 768px) {
   .city-tour-section {
       padding: 40px 0;
@@ -11978,41 +12000,10 @@ body.dark-theme {
       margin-top: 25px;
   }
 
-  .city-tour-images {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .city-tour-images img {
-      max-width: 100%;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .city-tour-title {
-      font-size: 1.75rem;
-  }
-
-  .city-tour-text {
-      font-size: 1rem;
-  }
-
-  .city-tour-images img {
-      max-width: 45%;
-  }
-}
-
-@media (min-width: 1025px) {
-  .city-tour-title {
-      font-size: 2rem;
-  }
-
-  .city-tour-text {
-      font-size: 1.1rem;
-  }
-
-  .city-tour-images img {
-      max-width: 30%;
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+      width: 20px;
+      height: 20px;
   }
 }
 

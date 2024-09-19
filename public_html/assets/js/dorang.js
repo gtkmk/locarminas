@@ -109,3 +109,51 @@ $(document).ready(function() {
         trackEvent('rede_social', 'click', 'Instagram');
     });
 });
+
+$(document).ready(function() {
+    let currentIndex = 0;
+    const items = $('.carousel-item');
+    const totalItems = items.length;
+    const slideIntervalTime = 5000;
+    let slideInterval;
+
+    function showSlide(index) {
+        items.removeClass('active');
+        items.eq(index).addClass('active');
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalItems;
+        showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        showSlide(currentIndex);
+    }
+
+    function startSlideInterval() {
+        slideInterval = setInterval(function() {
+            nextSlide();
+        }, slideIntervalTime);
+    }
+
+    function resetSlideInterval() {
+        clearInterval(slideInterval);
+        startSlideInterval();
+    }
+
+    $('.carousel-control-next').click(function() {
+        nextSlide();
+        resetSlideInterval();
+    });
+
+    $('.carousel-control-prev').click(function() {
+        prevSlide();
+        resetSlideInterval();
+    });
+
+    showSlide(currentIndex);
+
+    startSlideInterval();
+});
