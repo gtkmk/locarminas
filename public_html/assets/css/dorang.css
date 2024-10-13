@@ -12065,4 +12065,14 @@ body.dark-theme {
 
 .whatsapp-btn {
   width: 150px;
+  background-color: transparent;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.whatsapp-btn img {
+  margin-right: 10px;
+  vertical-align: middle;
 }
